@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/setup-python@v1
       with:
-        python-version: '3.7'
+        python-version: '3.8'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pipenv
@@ -20,27 +20,3 @@ jobs:
     - name: Run
       run: |
         pipenv run python main.py
-    - name: Push to srn
-      env:
-        SSH_KEY: ${{ secrets.SRN_KEY }}
-      run: |
-        eval $(ssh-agent)
-        ssh-add <(echo "$SSH_KEY" | base64 -d)
-        mkdir -p ~/.ssh
-        ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-        BRANCH_NAME="wiki-data-$(date +"%Y-%m-%d")"
-        mkdir srn
-        cd srn
-        git init
-        git remote add upstream https://github.com/runelite/static.runelite.net.git
-        git remote add origin git@github.com:runelite/static.runelite.net.git
-        git fetch upstream
-        git checkout upstream/gh-pages
-        git checkout -b "$BRANCH_NAME"
-        mkdir -p item npcs
-        cp ../stats{,.ids.min}.json item/
-        cp ../npcs{,.min}.json npcs
-        git add item/stats{,.ids.min}.json
-        git add npcs/npcs{,.min}.json
-        git -c user.name="RuneLite Wiki Scraper" -c user.email="runelite@runelite.net" commit -m "Update wiki data"
-        git push -u origin "$BRANCH_NAME"
