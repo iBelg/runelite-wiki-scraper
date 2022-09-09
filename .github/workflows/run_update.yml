@@ -21,11 +21,9 @@ jobs:
       run: |
         pipenv run python main.py
     - name: Push to srn
-      env:
-        SSH_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
       run: |
         eval $(ssh-agent)
-        ssh-add <(echo "$SSH_KEY" | base64 -d)
+        ssh-add - <<< "${{ secrets.SSH_DEPLOY_KEY }}"
         mkdir -p ~/.ssh
         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
         BRANCH_NAME="wiki-data"
