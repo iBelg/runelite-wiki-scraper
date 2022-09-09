@@ -1,0 +1,3 @@
+[submodule "static.runelite.net"]
+	path = static.runelite.net
+	url = https://github.com/runelite/static.runelite.net.git
