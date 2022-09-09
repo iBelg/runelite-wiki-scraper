@@ -35,10 +35,10 @@ jobs:
         git remote add upstream https://github.com/iBelg/osrs-dps-calc.git
         git remote add origin git@github.com:iBelg/osrs-dps-calc.git
         git fetch upstream
-        git switch --orphan "$BRANCH_NAME"
+        git checkout -b "$BRANCH_NAME"
         cp ../stats{,.ids.min}.json .
         cp ../npcs{,.min}.json .
         git add stats{,.ids.min}.json
         git add npcs{,.min}.json
         git -c user.name="iBelg" -c user.email="4256757+iBelg@users.noreply.github.com" commit -m "Update wiki data"
-        git push -u origin "$BRANCH_NAME"
+        git push -u origin "$BRANCH_NAME" -f
