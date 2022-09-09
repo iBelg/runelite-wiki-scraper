@@ -2,6 +2,7 @@ import sys
 import traceback
 import re
 import mwparserfromhell as mw
+import base64
 import api
 import util
 from typing import *
@@ -94,10 +95,13 @@ def run():
                 equipable = "equipable" in version and "yes" in str(
                     version["equipable"]).strip().lower()
 
-                members = "members" in version and "yes" in str(
+                doc["members"] = "members" in version and "yes" in str(
                     version["members"]).strip().lower()
 
-                doc["members"] = members or False
+                image = "data:image/png;base64,{}".format(base64.b64encode(
+                    open("static.runelite.net/cache/item/icon/{}.png".format(doc["__id__"]), "rb").read()).decode('utf-8'))
+
+                doc["image"] = image
 
                 if "weight" in version:
                     strval = str(version["weight"]).strip()
