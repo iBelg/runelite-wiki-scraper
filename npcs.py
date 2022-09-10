@@ -49,6 +49,10 @@ def run():
 
                 doc["immunities"] = immunities
 
+                if "attributes" in version:
+                    doc["attributes"] = [x.strip()
+                                         for x in version["attributes"].split(',')]
+
                 for key in ["hitpoints", "combat", "size", "att", "str", "def", "mage", "range", "attbns", "strbns", "amagic", "mbns", "arange", "rngbns", "dstab", "dslash", "dcrush", "dmagic", "drange"]:
                     try:
                         util.copy(key, doc, version, lambda x: int(x))
