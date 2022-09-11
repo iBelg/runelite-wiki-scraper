@@ -29,7 +29,7 @@ jobs:
         mkdir -p ~/.ssh
         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
         BRANCH_NAME="wiki-data"
-        mkdir wiki-data
+        mkdir -p wiki-data
         cd wiki-data
         git init
         git remote add upstream https://github.com/iBelg/osrs-dps-calc.git
