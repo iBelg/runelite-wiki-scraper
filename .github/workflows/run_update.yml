@@ -40,5 +40,6 @@ jobs:
         cp ../npcs{,.min}.json .
         git add stats{,.ids.min}.json
         git add npcs{,.min}.json
+        git add combatstyles.json
         git -c user.name="iBelg" -c user.email="4256757+iBelg@users.noreply.github.com" commit -m "Update wiki data"
         git push -u origin "$BRANCH_NAME" -f
