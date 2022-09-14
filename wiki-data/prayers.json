@@ -1,0 +1,147 @@
+{
+  "thick skin": {
+    "level": 1,
+    "drain": 3,
+    "members": false
+  },
+  "burst of strength": {
+    "level": 4,
+    "drain": 3,
+    "members": false
+  },
+  "clarity of thought": {
+    "level": 7,
+    "drain": 3,
+    "members": false
+  },
+  "sharp eye": {
+    "level": 8,
+    "drain": 3,
+    "members": false
+  },
+  "mystic will": {
+    "level": 9,
+    "drain": 3,
+    "members": false
+  },
+  "rock skin": {
+    "level": 10,
+    "drain": 6,
+    "members": false
+  },
+  "superhuman strength": {
+    "level": 13,
+    "drain": 6,
+    "members": false
+  },
+  "improved reflexes": {
+    "level": 16,
+    "drain": 6,
+    "members": false
+  },
+  "rapid restore": {
+    "level": 19,
+    "drain": 1,
+    "members": false
+  },
+  "rapid heal": {
+    "level": 22,
+    "drain": 2,
+    "members": false
+  },
+  "protect item": {
+    "level": 25,
+    "drain": 2,
+    "members": false
+  },
+  "hawk eye": {
+    "level": 26,
+    "drain": 6,
+    "members": false
+  },
+  "mystic lore": {
+    "level": 27,
+    "drain": 6,
+    "members": false
+  },
+  "steel skin": {
+    "level": 28,
+    "drain": 12,
+    "members": false
+  },
+  "ultimate strength": {
+    "level": 31,
+    "drain": 12,
+    "members": false
+  },
+  "incredible reflexes": {
+    "level": 34,
+    "drain": 12,
+    "members": false
+  },
+  "protect from magic": {
+    "level": 37,
+    "drain": 12,
+    "members": false
+  },
+  "protect from missiles": {
+    "level": 40,
+    "drain": 12,
+    "members": false
+  },
+  "protect from melee": {
+    "level": 43,
+    "drain": 12,
+    "members": false
+  },
+  "eagle eye": {
+    "level": 44,
+    "drain": 12,
+    "members": false
+  },
+  "mystic might": {
+    "level": 45,
+    "drain": 12,
+    "members": false
+  },
+  "retribution": {
+    "level": 46,
+    "drain": 3,
+    "members": true
+  },
+  "redemption": {
+    "level": 49,
+    "drain": 6,
+    "members": true
+  },
+  "smite": {
+    "level": 52,
+    "drain": 18,
+    "members": true
+  },
+  "preserve": {
+    "level": 55,
+    "drain": 2,
+    "members": true
+  },
+  "chivalry": {
+    "level": 60,
+    "drain": 24,
+    "members": true
+  },
+  "piety": {
+    "level": 70,
+    "drain": 24,
+    "members": true
+  },
+  "rigour": {
+    "level": 74,
+    "drain": 24,
+    "members": true
+  },
+  "augury": {
+    "level": 77,
+    "drain": 24,
+    "members": true
+  }
+}
